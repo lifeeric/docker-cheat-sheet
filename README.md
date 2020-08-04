@@ -4,19 +4,19 @@
 
 ### Show commands & management commands
 
-```
+```shell
 $ docker
 ```
 
 ### Docker version info
 
-```
+```shell
 $ docker version
 ```
 
 ### Show info like number of containers, etc
 
-```
+```shell
 $ docker info
 ```
 
@@ -24,19 +24,19 @@ $ docker info
 
 ### Create an run a container in foreground
 
-```
+```bash
 $ docker container run -it -p 80:80 nginx
 ```
 
 ### Create an run a container in background
 
-```
+```bash
 $ docker container run -d -p 80:80 nginx
 ```
 
 ### Shorthand
 
-```
+```bash
 $ docker container run -d -p 80:80 nginx
 ```
 
