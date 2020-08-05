@@ -360,6 +360,10 @@ $ docker image tag bradtraversy/nginx bradtraversy/nginx:testing
 ```
 $ docker image build -t [REPONAME] .
 ```
+### Benchmarking builds
+
+```$ DOCKER_BUILDKIT=1 docker image build -t [REPONAME] .
+```
 
 #### TIP: CACHE & ORDER
 
