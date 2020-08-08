@@ -531,6 +531,26 @@ services:
       - '80:4000'
 ```
 
+
+### Example 2
+```
+version: '3'
+services:
+  app:
+    container_name: docker-node-mongo
+    restart: always
+    build: .
+    ports:
+      - '80:3000'
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
+```
+
 ### To run
 
 ```
