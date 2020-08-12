@@ -321,6 +321,14 @@ $ docker network disconnect [NETWORK_NAME] [CONTAINER_NAME]
 $ docker network disconnect
 ```
 
+### Delete/Remove network
+
+To remove the network by name or id, multiple can be deleted:
+
+```shelll
+$ docker network rm [NETWORK_NAME] [NETWORK_NAME]
+```
+
 # IMAGE TAGGING & PUSHING TO DOCKERHUB
 
 # tags are labels that point ot an image ID
