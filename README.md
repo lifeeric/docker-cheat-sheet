@@ -168,19 +168,19 @@ $ docker container run -d -p 80:80 --name nginx nginx (-p 80:80 is optional as i
 
 APACHE:
 
-```
+```bash
 $ docker container run -d -p 8080:80 --name apache httpd
 ```
 
 MONGODB:
 
-```
+```bash
 $ docker container run -d -p 27017:27017 --name mongo mongo
 ```
 
 MYSQL:
 
-```
+```bash
 $ docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql
 ```
 
@@ -194,7 +194,7 @@ $ docker container inspect [NAME]
 
 ### Specific property (--format)
 
-```
+```bash
 $ docker container inspect --format '{{ .NetworkSettings.IPAddress }}' [NAME]
 ```
 
@@ -488,7 +488,7 @@ $ docker container run  -p 80:80 -v $(pwd):/usr/share/nginx/html nginx
 
 ### Go into the container and check
 
-```
+```bash
 $ docker container exec -it nginx bash
 $ cd /usr/share/nginx/html
 $ ls -al
@@ -496,9 +496,21 @@ $ ls -al
 
 ### You could create a file in the container and it will exiost on the host as well
 
-```
+```bash
 $ touch test.txt
 ```
+
+# Link
+
+```bash
+docker run -d --name my-postgres postgres
+```
+now Link it with dot net
+
+```bash
+docker run -d -p 5000:5000 --link my-postgres:postgres btree/dotnet
+```
+
 
 # DOCKER COMPOSE
 
