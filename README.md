@@ -256,6 +256,17 @@ $ docker container run -it alpine sh
 (use sh because it does not include bash)
 (alpine uses apk for its package manager - can install bash if you want)
 
+# Limiting The Memory Usage For Containers
+
+In order to limit the amount of memory a docker container process can use, simply set the -m [memory amount] flag with the limit.
+
+To run a container with memory limited to 256 MBs:
+
+##### Example: docker run -name [name] -m [Memory (int)][memory unit (b, k, m or g)] -d (to run not to attach) -p (to set access and expose ports) [image ID]
+```
+$ docker run -m 64m -d -p 8082:80 tutum/wordpress
+```
+
 # NETWORKING
 
 ### "bridge" or "docker0" is the default network
