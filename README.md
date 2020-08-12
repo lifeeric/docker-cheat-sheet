@@ -285,6 +285,18 @@ $ docker network inspect [NETWORK_NAME]
 $ docker network create [NETWORK_NAME]
 ```
 
+or 
+```bash
+$ docker network create --driver bridge [NETWORK_NAME]
+```
+
+#### Link to container, add to network
+
+```shell
+$ docker run -d --net=[NETWORK_NAME] --name mongodb mongo
+```
+
+
 ### Create container on network
 
 ```
@@ -468,7 +480,7 @@ $ docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mys
 
 ### Inspect new named volume
 
-```
+```bash
 docker volume inspect mysql-db
 ```
 
@@ -503,12 +515,12 @@ $ touch test.txt
 # Link
 
 ```bash
-docker run -d --name my-postgres postgres
+$ docker run -d --name my-postgres postgres
 ```
 now Link it with dot net
 
 ```bash
-docker run -d -p 5000:5000 --link my-postgres:postgres btree/dotnet
+$ docker run -d -p 5000:5000 --link my-postgres:postgres btree/dotnet
 ```
 
 
